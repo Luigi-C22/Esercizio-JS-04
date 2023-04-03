@@ -31,3 +31,43 @@ const amy = {
 
 const prices = [34, 5, 2]
 const shippingCost = 50
+
+let totShip = 0;
+let sum = 0;
+let discount = 0.7;
+for (let i = 0; i < prices.length; i++) {
+  sum += prices[i];
+}
+  //console.log("la spesa è: " + sum);
+  
+  //logica per utente Marco
+  if(marco.isAmbassador){
+    if(sum >= 100){
+      totShip = ((sum * discount) + shippingCost );
+      console.log("la spesa totale scontata con spedizione è: " + totShip);
+    } else {
+    totShip = (sum + shippingCost);
+    console.log("la spesa totale senza sconto con spedizione è: " + totShip);
+    }
+  }
+  // logica per utente Paul
+  if(paul.isAmbassador){
+    if(sum >= 100){
+      totShip = ((sum * discount) + shippingCost );
+      console.log("la spesa totale scontata con spedizione è: " + totShip);
+    } else {
+    totShip = (sum + shippingCost);
+    console.log("la spesa totale senza sconto con spedizione è: " + totShip);
+    }
+  }
+
+  // logica per utente Amy
+  if(amy.isAmbassador){
+    if(sum >= 100){
+      totShip = ((sum * discount) + shippingCost );
+      console.log("la spesa totale scontata con spedizione è: " + totShip);
+    } else {
+    totShip = (sum + shippingCost);
+    console.log("la spesa totale senza sconto con spedizione è: " + totShip);
+    }
+  }
