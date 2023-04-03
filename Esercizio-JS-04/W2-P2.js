@@ -57,28 +57,53 @@ for (let index = 0; index < numbers.length; index++) {
 /* ESERCIZIO 7 (EXTRA)
   Scrivi del codice per eliminare solo i valori PARI da un array.
 */
-let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
+/*let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 for (let index = 0; index < numbers.length; index++){
-  
-}
+  if(numbers[index] % 2 === 0){
+    numbers.splice(index, 1);
+   
+  }console.log(numbers);
+}*/
 
-/* ESERCIZIO 8
+/* ESERCIZIO 8 ******necessarie istruzioni Math.floor e Math.random
   Scrivi del codice per creare un array di 10 elementi; ognuno di essi deve essere un valore random compreso tra 0 e 10 (incluso), SENZA AMMETTERE DUPLICATI.
  */
+/*  let array = [];
+  while (array.length < 10) {
+    let random = Math.floor(Math.random() * 11);
+    if (!array.includes(random)) {
+      array.push(random);
+    }
+  } */
 
-/* ESERCIZIO 9
+/* ESERCIZIO 9 ******necessaria istruzione "map"
   Sostituisci ogni stringa contenuta in un array con un numero rappresentante la sua lunghezza.
   es.: ["EPICODE", "is", "great"] => [7, 2, 5]
 */
+/*
+let array = ['Hello', 'World', 'JavaScript', 'Epicode'];
+let newArray = array.map(string => string.length);
+console.log(newArray);
+*/
 
-/* ESERCIZIO 10
+/* ESERCIZIO 10 ***necessaria l'istruzione "reverse"
   Scrivi un algoritmo in grado di invertire un array.
   es: [1, 3, 5] ==> [5, 3, 1]
 */
-
-/* ESERCIZIO 11
+/*let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+ let newNumbers = numbers.reverse();
+console.log(newNumbers);
+*/
+/* ESERCIZIO 11 ******richiede il metodo "reduce" e "Math"
   Scrivi del codice per estrarre il massimo valore numerico da un array.
+*/
+/*let array = [2, 5, 6, 1, 4, 10, 18, 7, 8];
+
+let min = array => array.reduce((x, y) => Math.min(x, y));
+let max = array => array.reduce((x, y) => Math.max(x, y));
+
+console.log("Il Max è = " + max(array));
+console.log("Il Min è = " + min(array));
 */
 
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
@@ -200,28 +225,75 @@ const movies = [
 /* ESERCIZIO 12
   Scrivi del codice per trovare il film più vecchio nell'array fornito.
 */
+/*let oldFilm = movies[0];
+
+ for (let i = 0; i < movies.length; i++) {
+     if ((movies[i].Year) < (oldFilm.Year)) {
+       oldFilm = movies[i];
+   }
+ }
+ console.log(oldFilm);
+*/
 
 /* ESERCIZIO 13
   Scrivi del codice per ottenere il numero di film contenuti nell'array fornito.
+*/
+/*let quantity = movies.length;
+console.log("Nell'array ci sono " + quantity + " films");
 */
 
 /* ESERCIZIO 14
   Scrivi del codice per creare un array con solamente i titoli dei film contenuti nell'array fornito.
 */
+/* let TitleFilms = [];
 
+ for (let i = 0; i < movies.length; i++) { 
+     let movie = movies[i]; 
+     let title = movie.Title; 
+     TitleFilms.push(title); 
+ }
+ console.log(TitleFilms);
+*/
 /* ESERCIZIO 15
   Scrivi del codice per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
+*/
+/*
+for (let i = 0; i < movies.length; i++){
+  if(movies[i].Year>=2000){
+    console.log(movies[i].Title)
+    i++
+  }
+}
 */
 
 /* ESERCIZIO 16
   Scrivi del codice per ottenere dall'array fornito il film con il seguente id.
 */
-const id = 'tt0355702'
+/*const id = 'tt0355702'
+ 
+for (let i = 0; i < movies.length; i++)
+  if (movies[i].imdbID.includes(id)){
+    console.log(movies[i].Title);
+     i++
+}*/
 
 /* ESERCIZIO 17
   Scrivi del codice per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
+*/
+/*
+let sumYears = 0;
+for (let i = 0; i < movies.length; i++) {
+    sumYears += parseInt(movies[i].Year);
+  }
+  console.log(sumYears);
 */
 
 /* ESERCIZIO 18
   Scrivi del codice per recuperare tutti i film dall'array fornito che contengono una parola fornita.
 */
+/*let KeyWord = "Ring";
+  for (let i = 0; i < movies.length; i++) {
+   if (movies[i].Title.includes(KeyWord)) { 
+       console.log(movies[i]);
+   } 
+ }*/
