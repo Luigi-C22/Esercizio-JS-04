@@ -20,10 +20,15 @@ for(var1 = 1; var1 <=99; var1+=2){
     }console.log(array); 
 */
 
-/* ESERCIZIO 3
+/* ESERCIZIO 3 ****** richiede  Math.floor e Math.random
   Scrivi del codice per creare un array di 10 elementi; ognuno di essi deve essere un valore random compreso tra 0 e 100 (incluso).
  */
-
+ /* let arr = [];
+  for (let i = 0; i < 10; i++) {
+    arr.push(Math.floor(Math.random() * 101));
+  }
+  console.log(arr);
+*/
 /* ESERCIZIO 4
   Scrivi del codice per ricavare solamente i valori PARI da un array composto da soli valori numerici.
  */
@@ -37,7 +42,6 @@ for(numbers = 2; numbers<11; numbers +=2){
  */
 /*let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   let mySum = 0;
-
 for (let i = 0; i < numbers.length; i++) {
   mySum += numbers[i];
  }
@@ -48,8 +52,8 @@ for (let i = 0; i < numbers.length; i++) {
 */
 /*let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-for (let index = 0; index < numbers.length; index++) {
-   numbers[index]++;
+for (let i= 0; i < numbers.length; i++) {
+   numbers[i]++;
  }
  console.log(numbers);
 */
@@ -57,24 +61,26 @@ for (let index = 0; index < numbers.length; index++) {
 /* ESERCIZIO 7 (EXTRA)
   Scrivi del codice per eliminare solo i valori PARI da un array.
 */
+
 /*let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-for (let index = 0; index < numbers.length; index++){
-  if(numbers[index] % 2 === 0){
-    numbers.splice(index, 1);
+for (let i = 0; i < numbers.length; i++){
+  if(numbers[i] % 2 === 0)
+    numbers.splice(i, 1);
    
-  }console.log(numbers);
+  console.log(numbers);
 }*/
 
 /* ESERCIZIO 8 ******necessarie istruzioni Math.floor e Math.random
   Scrivi del codice per creare un array di 10 elementi; ognuno di essi deve essere un valore random compreso tra 0 e 10 (incluso), SENZA AMMETTERE DUPLICATI.
  */
-/*  let array = [];
+  /*let array = [];
   while (array.length < 10) {
     let random = Math.floor(Math.random() * 11);
     if (!array.includes(random)) {
       array.push(random);
     }
-  } */
+  } console.log(array)
+  */
 
 /* ESERCIZIO 9 ******necessaria istruzione "map"
   Sostituisci ogni stringa contenuta in un array con un numero rappresentante la sua lunghezza.
@@ -232,7 +238,7 @@ const movies = [
        oldFilm = movies[i];
    }
  }
- console.log(oldFilm);
+ console.log(oldFilm.Title); //oppure 'console.log(oldFilm)' per ottenere tutte le info dell'oggetto
 */
 
 /* ESERCIZIO 13
@@ -245,8 +251,7 @@ console.log("Nell'array ci sono " + quantity + " films");
 /* ESERCIZIO 14
   Scrivi del codice per creare un array con solamente i titoli dei film contenuti nell'array fornito.
 */
-/* let TitleFilms = [];
-
+ /*let TitleFilms = [];
  for (let i = 0; i < movies.length; i++) { 
      let movie = movies[i]; 
      let title = movie.Title; 
