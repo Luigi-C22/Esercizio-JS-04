@@ -29,7 +29,7 @@ const amy = {
   isAmbassador: false,
 }
 
-const prices = [34, 5, 2]
+const prices = [34, 5, 62]
 const shippingCost = 50
 
 let totShip = 0;
@@ -44,20 +44,20 @@ for (let i = 0; i < prices.length; i++) {
   if(marco.isAmbassador){
     if(sum >= 100){
       totShip = ((sum * discount) + shippingCost );
-      console.log("la spesa totale scontata con spedizione è: " + totShip);
+      console.log("la spesa totale di " + marco.name + " scontata con spedizione è: " + totShip);
     } else {
     totShip = (sum + shippingCost);
-    console.log("la spesa totale senza sconto con spedizione è: " + totShip);
+    console.log("la spesa totale di " + marco.name + " senza sconto con spedizione è: " + totShip);
     }
   }
   // logica per utente Paul
   if(paul.isAmbassador){
     if(sum >= 100){
       totShip = ((sum * discount) + shippingCost );
-      console.log("la spesa totale scontata con spedizione è: " + totShip);
+      console.log("la spesa totaledi " + paul.name + "  scontata con spedizione è: " + totShip);
     } else {
     totShip = (sum + shippingCost);
-    console.log("la spesa totale senza sconto con spedizione è: " + totShip);
+    console.log("la spesa totale di " + paul.name + "senza sconto con spedizione è: " + totShip);
     }
   }
 
@@ -65,9 +65,9 @@ for (let i = 0; i < prices.length; i++) {
   if(amy.isAmbassador){
     if(sum >= 100){
       totShip = ((sum * discount) + shippingCost );
-      console.log("la spesa totale scontata con spedizione è: " + totShip);
+      console.log("la spesa totale di " + amy.name + "scontata con spedizione è: " + totShip);
     } else {
     totShip = (sum + shippingCost);
-    console.log("la spesa totale senza sconto con spedizione è: " + totShip);
+    console.log("la spesa totale di " + amy.name + "senza sconto con spedizione è: " + totShip);
     }
   }
